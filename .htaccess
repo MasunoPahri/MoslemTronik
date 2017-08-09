@@ -1,0 +1,15 @@
+RewriteEngine On
+RewriteBase /mtronik/
+RewriteRule ^redirect/(stok-(kartu|hp|aksesoris)|kategori-(kartu|hp)|pembelian|userlist|retur|ubah-password-(\w+))/(sukses|gagal)$ code_src/redirect.php?pg=$1&msg=$5
+
+RewriteRule ^profil/(\w+)$ view_src/base.php?user=$1
+RewriteRule ^ubah-profil/(\w+)$ view_src/edituser.php?user=$1
+RewriteRule ^ubah-password/(\w+)$ view_src/changePass.php?user=$1
+RewriteRule ^hapus/(\w+)$ code_src/hapusUser.php?user=$1
+
+RewriteRule ^edit-product/(\d+)$ template/admin/editProduct.php?id=$1
+RewriteRule ^delete-product/(\d+)$ template/admin/deleteProduct.php?id=$1
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /mtronik/view_src/base.php [L]

@@ -1,0 +1,57 @@
+INFO stok
+INFO penjualan per hari
+notif stok ke admin
+input data hp dan aksesoris
+input stok kartu paket
+pengkategorian kartu paket
+cetak bon setiap transaksi
+
+Field kartu paket
+nama kartu, kuota, jumlah kartu, kategori, tanggal beli,
+nama pegawai, shift pegawai, nama pembeli, harga satuan, harga total
+
+auth utk kasir ada 3 shift
+
+Nama barang
+alasan retur
+jumlah retur
+barang ditukar dengan
+
+// get the last DIV which ID starts with ^= "klon"
+var $div = $('div[id^="klon"]:last');
+
+// Read the Number from that DIV's ID (i.e: 3 from "klon3")
+// And increment that number by 1
+var num = parseInt( $div.prop("id").match(/\d+/g), 10 ) +1;
+
+// Clone it and assign the new ID (i.e: from num 4 to ID "klon4")
+var $klon = $div.clone().prop('id', 'klon'+num );
+
+
+$data = mysql_query("SELECT *
+		FROM mahasiswa INNER JOIN pembayaran
+		ON pembayaran.nim=mahasiswa.nim");
+
+
+buatrp($angka)
+{
+ $jadi = "Rp " . number_format($angka,2,',','.');
+return $jadi
+}
+
+tampilkan harga total saat unit brang bertambah
+
+crud user (yg belum -> edit profil)
+router.php
+htaccess
+
+navbar.php
+profil.php
+styles.php
+scripts.php
+
+userlist.php
+beranda.php
+
+do_login.php
+hapusUser.php
